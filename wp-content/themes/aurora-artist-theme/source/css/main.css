@@ -1,0 +1,351 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+
+/* ------ Add your CSS below this line (or @import your other CSS files). ------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import "fonts";
+@import "ticker";
+@import "flickity";
+@import "noise";
+@import "seated";
+
+.inter-font-medium {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+html,body{
+  /*  @apply h-full;*/
+  }
+body {
+    font-family: "Inter", sans-serif;
+   
+    @apply transition-colors duration-1000;
+}
+
+svg {
+    font-family: "Inter", sans-serif;
+}
+
+p {
+    @apply mb-4;
+}
+
+.nav,
+button {
+    font-family: "Inter", sans-serif;
+}
+
+
+.siteWidth {
+    max-width: 1376px;
+}
+
+button,
+.button {
+    @apply cursor-pointer;
+    @apply inline-block;
+    @apply transition duration-150 ease-in-out;
+    @apply bg-aurora_grey;
+    @apply rounded-full;
+    @apply uppercase;
+    @apply py-2;
+    @apply px-8;
+    @media (min-width: 640px) {
+        @apply max-w-sm;
+    }
+}
+
+.button-ticket{
+    @apply cursor-pointer;
+    @apply transition duration-150 ease-in-out;
+    @apply rounded-full;
+    @apply uppercase;
+    @apply py-1;
+    @apply px-3;
+    @apply text-xs;
+    @apply m-2;
+    @media (min-width: 640px) {
+        @apply max-w-sm;
+        @apply text-sm;
+    }
+}
+
+
+.button-small{
+    @apply cursor-pointer;
+    @apply transition duration-150 ease-in-out;
+    @apply rounded-full;
+    @apply uppercase;
+    @apply py-1;
+    @apply pl-3;
+    @apply pr-1;
+    @apply text-sm;
+    @apply m-2;
+    @media (min-width: 640px) {
+        @apply max-w-sm;
+    }
+}
+
+.button-small svg{
+    @apply w-full;
+}
+
+#mobileSocialMediaIconWrapper {
+    @apply pb-4;
+    @apply pt-4;
+    @apply bottom-0;
+    @apply left-0;
+}
+
+#socialMediaIconWrapper {
+    @apply p-4;
+    ul>*+* {
+        margin-left: 0.3rem;
+    }
+}
+
+#socialMediaIconWrapper,
+#mobileSocialMediaIconWrapper {
+    .fa {
+        font-size: 28px;
+    }
+}
+
+#logoWrapper {
+    @apply pointer-events-none;
+    .logo-eno {
+        @apply pointer-events-auto;
+        width: 130px;
+    }
+}
+
+#desktopLogoWrapper .logo-eno {
+    @media (min-width: 640px) {
+        width: 212px;
+    }
+}
+
+#toggleWrapper {
+    @media (min-width: 640px) {
+        top: 22px;
+        right: 12px
+    }
+}
+
+#mobileLogoWrapper {
+    width: 130px;
+    height: 24px;
+    @media (min-width: 640px) {
+        width: 175px;
+        height: 33px;
+    }
+}
+
+#primary-menu {
+    @apply mt-16;
+    font-family: 'Aurora-chrome';
+    @apply text-lg;
+    li {
+        @apply mb-8
+    }
+    @media (min-width: 640px) {
+      @apply text-4xl;
+    }
+}
+
+#mainPackshotWrapper {
+    max-width: 850px;
+}
+
+.two-col-custom-aspect-ratio {
+    aspect-ratio: 88 / 45;
+}
+
+.ticker-wrap {
+    @apply h-auto;
+    .ticker {
+        @apply h-auto;
+        @apply leading-8;
+    }
+    .ticker__item {
+        font-family: 'Scoreboard';
+        @apply py-2;
+        @apply text-sm;
+        @media (min-width: 640px) {
+            @apply text-xl;
+            -webkit-font-smoothing: none;
+        }
+    }
+}
+
+#titleWrapper {
+    max-width: 100vw;
+    img {
+        @apply m-auto;
+    }
+}
+
+#mobile-text-wrapper {
+    @apply tracking-wide;
+}
+
+#newsletter {
+    pointer-events: auto;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    #email {
+        -webkit-appearance: none;
+        display: inline-flex;
+        background: rgba(white, .1);
+        border-top-left-radius: 3px!important;
+        border-bottom-left-radius: 3px!important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        color: white;
+        text-align: left;
+        font-family: "Inter", sans-serif;
+        text-transform: none;
+        width: 160px!important;
+        font-size: 12px;
+        padding: 6px 10px 7px;
+        @apply bg-black;
+        @apply outline-0;
+    }
+}
+
+.back-home-btn {
+    font-family: 'Avenir Next'!important;
+    svg>path {
+        fill: white
+    }
+    &:hover {
+        svg>path {
+            fill: black
+        }
+    }
+}
+
+.flickity-button {
+    @apply hidden;
+}
+
+.flickity-slider {
+    div {
+        @apply opacity-50 transition-opacity;
+        @apply mr-8;
+        @apply relative;
+        img {
+            /* @apply border;*/
+            @apply h-full;
+            @apply w-full;
+            @apply object-contain;
+            @apply max-w-full;
+            max-height: 680px;
+            @apply mb-4
+        }
+        &.is-selected {
+            @apply opacity-100;
+        }
+        width: 260px;
+        @apply text-xs;
+        @media (min-width: 640px) {
+            width: 800px;
+            max-height: 800px;
+            @apply text-base
+        }
+    }
+}
+
+
+/* position dots up a bit */
+
+.flickity-page-dots {
+    bottom: -22px;
+}
+
+
+/* dots are lines */
+
+.flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.thumbWrapper {
+    @apply relative;
+    @media (min-width: 1024px) {
+        @apply flex-shrink-0;
+        img {
+            width: 554px;
+        }
+    }
+}
+
+.releaseCopy {
+    max-width: 672px;
+}
+
+ol {
+    @apply list-decimal;
+    @apply ml-6;
+    li {
+        @apply pl-1;
+    }
+    @media (min-width: 1024px) {
+        @apply ml-4;
+        li {
+            @apply pl-2;
+        }
+    }
+}
+
+.thumbWrapper img {
+    @apply shadow-2xl;
+}
+
+h1{
+    font-family: 'Aurora-chrome';
+}
+
+.gigs td{
+    @apply align-top
+}
+
+.menu-item .ae-cform-container {
+    max-width: none;
+    font-family: 'Aurora-chrome';
+    @apply text-lg;
+    @media (min-width: 640px) {
+        @apply text-4xl;
+      }
+}
+
+model-viewer {
+    --progress-bar-color: transparent;
+}
+
+#videoPopup iframe{
+    @apply w-full;
+    @apply h-full;
+    aspect-ratio: 9 / 16;
+    @media (min-width: 640px) {
+     @apply aspect-video;
+     @apply h-auto;
+    }
+}

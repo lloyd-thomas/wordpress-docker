@@ -57,6 +57,61 @@
       "oAP" : "\/assets\/.gitignore",
       "oF" : 0
     },
+    "\/assets\/js\/gsap\/gsap.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/gsap\/gsap.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/gsap\/ScrollSmoother.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/gsap\/ScrollSmoother.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/gsap\/ScrollToPlugin.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/gsap\/ScrollToPlugin.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/gsap\/ScrollTrigger.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/gsap\/ScrollTrigger.min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/main.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/main-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/comments.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -151,6 +206,12 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/LICENSE",
+      "oF" : 0
+    },
+    "\/node_modules" : {
+      "ft" : 65536,
+      "oA" : 2,
+      "oAP" : "\/node_modules",
       "oF" : 0
     },
     "\/package-lock.json" : {
@@ -368,6 +429,17 @@
       "oAP" : "\/source\/fonts\/AURORAxCHROME.woff2",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/CSSRulePlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/CSSRulePlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/CSSRulePlugin.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -386,6 +458,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/CSSRulePlugin.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/CustomBounce.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/CustomBounce.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/CustomBounce.min.js" : {
       "bF" : 0,
@@ -406,6 +489,17 @@
       "oAP" : "\/source\/js\/gsap\/CustomBounce.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/CustomEase.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/CustomEase.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/CustomEase.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -424,6 +518,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/CustomEase.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/CustomWiggle.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/CustomWiggle.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/CustomWiggle.min.js" : {
       "bF" : 0,
@@ -444,6 +549,17 @@
       "oAP" : "\/source\/js\/gsap\/CustomWiggle.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/Draggable.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/Draggable.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/Draggable.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -462,6 +578,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/Draggable.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/DrawSVGPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/DrawSVGPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/DrawSVGPlugin.min.js" : {
       "bF" : 0,
@@ -482,6 +609,17 @@
       "oAP" : "\/source\/js\/gsap\/DrawSVGPlugin.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/EaselPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/EaselPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/EaselPlugin.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -501,6 +639,17 @@
       "oAP" : "\/source\/js\/gsap\/EaselPlugin.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/EasePack.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/EasePack.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/EasePack.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -519,6 +668,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/EasePack.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/Flip.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/Flip.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/Flip.min.js" : {
       "bF" : 0,
@@ -558,6 +718,17 @@
       "oAP" : "\/source\/js\/gsap\/gsap.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/GSDevTools.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/GSDevTools.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/GSDevTools.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -576,6 +747,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/GSDevTools.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/InertiaPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/InertiaPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/InertiaPlugin.min.js" : {
       "bF" : 0,
@@ -596,6 +778,17 @@
       "oAP" : "\/source\/js\/gsap\/InertiaPlugin.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/MorphSVGPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/MorphSVGPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/MorphSVGPlugin.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -614,6 +807,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/MorphSVGPlugin.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/MotionPathHelper.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/MotionPathHelper.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/MotionPathHelper.min.js" : {
       "bF" : 0,
@@ -634,6 +838,17 @@
       "oAP" : "\/source\/js\/gsap\/MotionPathHelper.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/MotionPathPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/MotionPathPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/MotionPathPlugin.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -652,6 +867,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/MotionPathPlugin.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/Observer.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/Observer.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/Observer.min.js" : {
       "bF" : 0,
@@ -672,6 +898,17 @@
       "oAP" : "\/source\/js\/gsap\/Observer.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/Physics2DPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/Physics2DPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/Physics2DPlugin.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -690,6 +927,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/Physics2DPlugin.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/PhysicsPropsPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/PhysicsPropsPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/PhysicsPropsPlugin.min.js" : {
       "bF" : 0,
@@ -710,6 +958,17 @@
       "oAP" : "\/source\/js\/gsap\/PhysicsPropsPlugin.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/PixiPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/PixiPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/PixiPlugin.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -728,6 +987,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/PixiPlugin.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/ScrambleTextPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/ScrambleTextPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/ScrambleTextPlugin.min.js" : {
       "bF" : 0,
@@ -805,6 +1075,17 @@
       "oAP" : "\/source\/js\/gsap\/ScrollTrigger.min.js.map",
       "oF" : 0
     },
+    "\/source\/js\/gsap\/SplitText.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/SplitText.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/source\/js\/gsap\/SplitText.min.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -823,6 +1104,17 @@
       "oA" : 0,
       "oAP" : "\/source\/js\/gsap\/SplitText.min.js.map",
       "oF" : 0
+    },
+    "\/source\/js\/gsap\/TextPlugin.min-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/source\/js\/gsap\/TextPlugin.min-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/source\/js\/gsap\/TextPlugin.min.js" : {
       "bF" : 0,
@@ -1133,7 +1425,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-payne",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 738598128.95251095
+    "lastBuiltDate" : 747138163.343961
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -1427,14 +1719,14 @@
     "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
-    "buildEnvironment" : 0,
+    "buildEnvironment" : 1,
     "buildFolderActive" : 0,
     "buildFolderName" : "assets",
     "cleanBuild" : 0,
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "NODE_ENV:::production"
+      "NODE_ENV:::development"
     ],
     "esLintConfigFileHandlingType" : 0,
     "esLintECMAVersion" : 7,

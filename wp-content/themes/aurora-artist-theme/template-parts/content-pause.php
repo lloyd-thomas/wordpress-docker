@@ -126,8 +126,8 @@ $popup_display = $video_popup['popup_display'] ?? false;
               <div class="flex flex-col items-center">
                 <div class="flex gap-1 mb-1">
                   ${digits.map(d => `
-                    <div class="bg-black text-white text-xl md:text-3xl font-bold w-6 h-6 md:w-12 md:h-12 flex items-center justify-center rounded-md shadow-inner ibm-plex">
-                      ${d}
+                    <div class="bg-black text-white text-2xl md:text-3xl font-bold w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-md shadow-inner ibm-plex">
+                     ${d}
                     </div>
                   `).join('')}
                 </div>

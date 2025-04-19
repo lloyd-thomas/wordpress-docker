@@ -30,8 +30,8 @@ $popup_display = $video_popup['popup_display'] ?? false;
   $cta_2 = get_field('hero_cta_2');
   $overlay_color = get_field('hero_overlay_color') ?: '#405191';
   ?>
-   <section class="relative md:px-4 md:px-7 my-12 md:mt-20 ">
-    <div class="w-full lg:aspect-[16/9] md:rounded-3xl md:overflow-hidden relative dark:text-white">
+   <section class="relative px-4 md:px-7 my-12 md:mt-20 bg">
+    <div class="w-full lg:aspect-[16/9] rounded-2xl md:rounded-3xl md:overflow-hidden relative  bg-[#535A79] md:bg-transparent dark:text-white">
       <div class="hidden md:block">
         <div class="absolute inset-0 opacity-50 pointer-events-none z-10" style="background-color: <?php echo esc_attr($overlay_color); ?>;"></div>
 
@@ -44,11 +44,11 @@ $popup_display = $video_popup['popup_display'] ?? false;
         <?php endif; ?>
       </div>
 
-      <div class="relative z-10 md:text-white p-6 md:p-12 flex flex-col justify-center items-center text-center h-full">
+      <div class="relative z-10 text-white md:p-6 md:p-12 flex flex-col justify-center items-center text-center h-full">
         <?php if ($heading): ?>
-          <h1 class="text-3xl md:text-5xl font-bold mb-4 aurora-font"><?php echo esc_html($heading); ?></h1>
+          <h1 class="text-3xl md:text-5xl font-bold md:mb-4 p-4 aurora-font"><?php echo esc_html($heading); ?></h1>
         <?php endif; ?>
-        <div class="block md:hidden w-full h-64 mt-6">
+        <div class="block md:hidden w-full h-64">
       <?php if ($video_url): ?>
         <video class="w-full h-full object-cover md:rounded-xl" autoplay muted loop playsinline>
           <source src="<?php echo esc_url($video_url); ?>" type="video/mp4">
@@ -59,16 +59,18 @@ $popup_display = $video_popup['popup_display'] ?? false;
     </div>
 
         <?php if ($subtext): ?>
+          <div class="px-4">
           <p class="text-base md:text-xl max-w-2xl mb-6"><?php echo wp_kses_post($subtext); ?></p>
+          </div>
         <?php endif; ?>
 
         <?php if ($secondary_heading): ?>
-          <h2 class="text-lg md:text-2xl mb-4 aurora-font"><?php echo esc_html($secondary_heading); ?></h2>
+          <h2 class="text-lg md:text-2xl mb-4 aurora-font px-4"><?php echo esc_html($secondary_heading); ?></h2>
         <?php endif; ?>
 
-        <div id="countdown" class="flex gap-1 md:gap-6 justify-center items-end text-white text-center mt-8"></div>
+        <div id="countdown" class="flex gap-1 md:gap-6 justify-center items-end text-white text-center md:mt-8"></div>
 
-        <div class="flex flex-col sm:flex-row sm:gap-4 justify-center ">
+        <div class="flex flex-col pb-4 sm:flex-row sm:gap-4 justify-center ">
           <?php
           echo do_shortcode( '
           [ae-custom-form id=1 no_profile_link=true no_salutation=true]
@@ -130,7 +132,7 @@ $countdown_iso = $countdown_datetime ? $countdown_datetime->format('c') : '';
           <div class="flex flex-col items-center">
                 <div class="flex gap-1 mb-1">
                   ${digits.map(d => `
-                    <div class="bg-black text-white md:text-3xl font-bold w-6 h-6 md:w-12 md:h-12 flex items-center justify-center rounded-md shadow-inner ibm-plex">
+                    <div class="bg-black text-white text-2xl md:text-3xl font-bold w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-md shadow-inner ibm-plex">
                       ${d}
                     </div>
                   `).join('')}
@@ -199,7 +201,7 @@ $countdown_iso = $countdown_datetime ? $countdown_datetime->format('c') : '';
 </model-viewer>
 </div> -->
 <section class="pb-8 px-4 md:px-7 md:pb-20">
-    <iframe class="w-full aspect-video rounded-3xl" src="https://www.youtube.com/embed/Y1YTg6SEed8?si=oIM0pQMVMRxAX4zD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="w-full aspect-video rounded-2xl md:rounded-3xl" src="https://www.youtube.com/embed/Y1YTg6SEed8?si=oIM0pQMVMRxAX4zD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
   <section class="px-4 pb-4 md:px-7 md:pb-20" id="listen">
  

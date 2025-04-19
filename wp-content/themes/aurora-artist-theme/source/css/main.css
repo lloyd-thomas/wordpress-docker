@@ -1,9 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-
-
 /* ------ Add your CSS below this line (or @import your other CSS files). ------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
@@ -54,14 +51,12 @@ button,
     @apply cursor-pointer;
     @apply inline-block;
     @apply transition duration-150 ease-in-out;
-    @apply bg-aurora_grey;
+    @apply bg-white;
     @apply rounded-full;
     @apply uppercase;
     @apply py-2;
     @apply px-8;
-    @media (min-width: 640px) {
-        @apply max-w-sm;
-    }
+   
 }
 
 .button-ticket{
@@ -348,4 +343,8 @@ model-viewer {
      @apply aspect-video;
      @apply h-auto;
     }
+}
+
+.page-template-page-pause #themeToggleWrapper{
+    display:none;
 }

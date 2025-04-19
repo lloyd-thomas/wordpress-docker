@@ -11,13 +11,76 @@ if (
 } else {
     document.documentElement.classList.remove('dark');
 }
-
+function setupThemeToggle() {
+    const toggle = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+    const modelViewer = document.getElementById('heartModelViewer');
+  
+    if (!toggle || !darkIcon || !lightIcon) return;
+  
+    // initial icon setup
+    const isDark = localStorage.getItem('color-theme') === 'dark' ||
+      (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  
+    darkIcon.classList.toggle('hidden', isDark);
+    lightIcon.classList.toggle('hidden', !isDark);
+  
+    toggle.addEventListener('click', () => {
+      const isNowDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('color-theme', isNowDark ? 'dark' : 'light');
+      localStorage.setItem('theme-set', 'manual');
+  
+      darkIcon.classList.toggle('hidden', isNowDark);
+      lightIcon.classList.toggle('hidden', !isNowDark);
+  
+      if (modelViewer) {
+        modelViewer.setAttribute(
+          'environment-image',
+          isNowDark
+            ? 'https://cdn1.umg3.net/1412-cdn/glb/HDR_Dark.jpg'
+            : 'https://cdn1.umg3.net/1412-cdn/glb/HDR_Light.jpg'
+        );
+      }
+    });
+  }
+  
+  window.addEventListener('load', setupThemeToggle);
+  
 document.addEventListener('DOMContentLoaded', () => {
+
+    if (document.body.classList.contains('page-template-page-pause')) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+        localStorage.setItem('theme-set', 'manual'); // Optional: prevent further auto overrides
+      }
+
+      
     const menuLinks = document.querySelectorAll('a[href^="#"]');
     const siteNavigation = document.getElementById('site-navigation');
+    const burger = document.getElementById('burger');
     const secondaryNav = document.getElementById('secondaryNav');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const modelViewer = document.getElementById('heartModelViewer');
+    var closeMenu = document.getElementsByClassName("closeMenu");
+    var openMenu = document.getElementsByClassName("openMenu");
+
+    for (var i = 0; i < closeMenu.length; i++) {
+        closeMenu[i].addEventListener("click", function() {
+            siteNavigation.classList.add('opacity-0', 'pointer-events-none');
+            secondaryNav.classList.remove('hidden');
+            closeMenuBtn.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    }
+    for (var i = 0; i < openMenu.length; i++) {
+        openMenu[i].addEventListener("click", function() {
+            siteNavigation.classList.remove('opacity-0', 'pointer-events-none');
+            secondaryNav.classList.add('hidden');
+            closeMenuBtn.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        });
+    }
 
     // Function to check the initial theme and update the environment image
     function updateInitialEnvironmentImage() {
@@ -67,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
     });
-
+/*
     gsap.to("#mobileLogoWrapper", {
         scrollTrigger: {
             trigger: "section",
@@ -78,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         opacity: 0,
         duration: 0.5
     });
-
+*/
     var closeButton = document.getElementById('closeSubscribePopup');
     var popup = document.getElementById('subscribePopup');
 
@@ -107,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     themeToggleBtn.addEventListener('click', function() {
+        console.log('theme toggle clicked');
         localStorage.setItem('theme-set', 'manual');
 
         // toggle icons inside button
@@ -168,4 +232,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     checkTheme();
     setInterval(checkTheme, 1000);
+    
 });

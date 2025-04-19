@@ -14,7 +14,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/.eslintrc",
+      "oAP" : "\/assets\/.eslintrc",
       "oF" : 0
     },
     "\/.gitignore" : {
@@ -22,13 +22,13 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/.gitignore",
+      "oAP" : "\/assets\/.gitignore",
       "oF" : 0
     },
     "\/.stylelintrc.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/.stylelintrc-min.json",
+      "oAP" : "\/assets\/.stylelintrc-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -38,7 +38,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/404.php",
+      "oAP" : "\/assets\/404.php",
       "oF" : 0
     },
     "\/archive.php" : {
@@ -46,84 +46,27 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/archive.php",
+      "oAP" : "\/assets\/archive.php",
       "oF" : 0
     },
-    "\/assets\/.gitignore" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/.gitignore",
+    "\/assets" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/assets\/assets",
       "oF" : 0
-    },
-    "\/assets\/js\/gsap\/gsap.min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/gsap\/gsap.min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/js\/gsap\/ScrollSmoother.min-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/gsap\/ScrollSmoother.min-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/js\/gsap\/ScrollToPlugin.min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/gsap\/ScrollToPlugin.min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/js\/gsap\/ScrollTrigger.min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/gsap\/ScrollTrigger.min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/assets\/js\/main.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/js\/main-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
     },
     "\/comments.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/comments.php",
+      "oAP" : "\/assets\/comments.php",
       "oF" : 0
     },
     "\/composer.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/composer-min.json",
+      "oAP" : "\/assets\/composer-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -133,7 +76,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/footer.php",
+      "oAP" : "\/assets\/footer.php",
       "oF" : 0
     },
     "\/functions.php" : {
@@ -141,7 +84,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/functions.php",
+      "oAP" : "\/assets\/functions.php",
       "oF" : 0
     },
     "\/header.php" : {
@@ -149,7 +92,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/header.php",
+      "oAP" : "\/assets\/header.php",
       "oF" : 0
     },
     "\/inc\/custom-header.php" : {
@@ -157,7 +100,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/inc\/custom-header.php",
+      "oAP" : "\/assets\/inc\/custom-header.php",
       "oF" : 0
     },
     "\/inc\/customizer.php" : {
@@ -165,7 +108,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/inc\/customizer.php",
+      "oAP" : "\/assets\/inc\/customizer.php",
       "oF" : 0
     },
     "\/inc\/jetpack.php" : {
@@ -173,7 +116,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/inc\/jetpack.php",
+      "oAP" : "\/assets\/inc\/jetpack.php",
       "oF" : 0
     },
     "\/inc\/template-functions.php" : {
@@ -181,7 +124,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/inc\/template-functions.php",
+      "oAP" : "\/assets\/inc\/template-functions.php",
       "oF" : 0
     },
     "\/inc\/template-tags.php" : {
@@ -189,7 +132,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/inc\/template-tags.php",
+      "oAP" : "\/assets\/inc\/template-tags.php",
       "oF" : 0
     },
     "\/index.php" : {
@@ -197,7 +140,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/index.php",
+      "oAP" : "\/assets\/index.php",
       "oF" : 0
     },
     "\/LICENSE" : {
@@ -205,27 +148,19 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/LICENSE",
+      "oAP" : "\/assets\/LICENSE",
       "oF" : 0
     },
     "\/node_modules" : {
       "ft" : 65536,
       "oA" : 2,
-      "oAP" : "\/node_modules",
+      "oAP" : "\/assets\/node_modules",
       "oF" : 0
     },
     "\/package-lock.json" : {
       "ft" : 524288,
       "oA" : 1,
-      "oAP" : "\/package-lock-min.json",
-      "oF" : 0,
-      "oO" : 1,
-      "oS" : 1
-    },
-    "\/package.json" : {
-      "ft" : 524288,
-      "oA" : 1,
-      "oAP" : "\/package-min.json",
+      "oAP" : "\/assets\/package-lock-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -235,7 +170,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/page.php",
+      "oAP" : "\/assets\/page.php",
       "oF" : 0
     },
     "\/phpcs.xml.dist" : {
@@ -243,7 +178,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/phpcs.xml.dist",
+      "oAP" : "\/assets\/phpcs.xml.dist",
       "oF" : 0
     },
     "\/postcss.config.js" : {
@@ -252,7 +187,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/postcss.config-min.js",
+      "oAP" : "\/assets\/postcss.config-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -261,8 +196,8 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/README.html",
+      "oA" : 1,
+      "oAP" : "\/assets\/README.html",
       "oF" : 0
     },
     "\/README.md" : {
@@ -275,7 +210,7 @@
       "ft" : 4096,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/README.html",
+      "oAP" : "\/assets\/README.html",
       "oF" : 0,
       "oFM" : 0,
       "oS" : 0,
@@ -289,14 +224,14 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/readme.txt",
+      "oAP" : "\/assets\/readme.txt",
       "oF" : 0
     },
     "\/screenshot.png" : {
       "ft" : 32768,
       "iS" : 264,
       "oA" : 0,
-      "oAP" : "\/screenshot.png",
+      "oAP" : "\/assets\/screenshot.png",
       "oF" : 0,
       "oIPL" : 1,
       "opt" : 1,
@@ -310,7 +245,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/search.php",
+      "oAP" : "\/assets\/search.php",
       "oF" : 0
     },
     "\/sidebar.php" : {
@@ -318,7 +253,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sidebar.php",
+      "oAP" : "\/assets\/sidebar.php",
       "oF" : 0
     },
     "\/single.php" : {
@@ -326,7 +261,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/single.php",
+      "oAP" : "\/assets\/single.php",
       "oF" : 0
     },
     "\/source\/css\/flickity.css" : {
@@ -337,7 +272,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/source\/css\/flickity-min.css",
+      "oAP" : "\/assets\/css\/flickity-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -349,7 +284,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/source\/css\/fonts-min.css",
+      "oAP" : "\/assets\/css\/fonts-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -373,7 +308,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/source\/css\/noise-min.css",
+      "oAP" : "\/assets\/css\/noise-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -384,8 +319,8 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/source\/css\/seated-min-min.css",
+      "oA" : 1,
+      "oAP" : "\/assets\/css\/seated-min-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -397,7 +332,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/source\/css\/seated-min.css",
+      "oAP" : "\/assets\/css\/seated-min.css",
       "oF" : 1,
       "pg" : 0
     },
@@ -409,7 +344,7 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/source\/css\/ticker-min.css",
+      "oAP" : "\/assets\/css\/ticker-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -417,25 +352,25 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/source\/fonts\/AURORAxCHROME.otf",
-      "oF" : 0
+      "oA" : 2,
+      "oAP" : "\/assets\/fonts\/AURORAxCHROME.otf",
+      "oF" : 1
     },
     "\/source\/fonts\/AURORAxCHROME.woff2" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/source\/fonts\/AURORAxCHROME.woff2",
-      "oF" : 0
+      "oA" : 2,
+      "oAP" : "\/assets\/fonts\/AURORAxCHROME.woff2",
+      "oF" : 1
     },
     "\/source\/js\/gsap\/CSSRulePlugin.min-min.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CSSRulePlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/CSSRulePlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -446,7 +381,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CSSRulePlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/CSSRulePlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -456,7 +391,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CSSRulePlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/CSSRulePlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/CustomBounce.min-min.js" : {
@@ -464,8 +399,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomBounce.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/CustomBounce.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -476,7 +411,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomBounce.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/CustomBounce.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -486,7 +421,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomBounce.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/CustomBounce.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/CustomEase.min-min.js" : {
@@ -494,8 +429,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomEase.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/CustomEase.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -506,7 +441,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomEase.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/CustomEase.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -516,7 +451,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomEase.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/CustomEase.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/CustomWiggle.min-min.js" : {
@@ -524,8 +459,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomWiggle.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/CustomWiggle.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -536,7 +471,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomWiggle.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/CustomWiggle.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -546,7 +481,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/CustomWiggle.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/CustomWiggle.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/Draggable.min-min.js" : {
@@ -554,8 +489,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Draggable.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/Draggable.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -566,7 +501,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Draggable.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/Draggable.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -576,7 +511,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Draggable.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/Draggable.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/DrawSVGPlugin.min-min.js" : {
@@ -584,8 +519,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/DrawSVGPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/DrawSVGPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -596,7 +531,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/DrawSVGPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/DrawSVGPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -606,7 +541,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/DrawSVGPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/DrawSVGPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/EaselPlugin.min-min.js" : {
@@ -614,8 +549,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/EaselPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/EaselPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -626,7 +561,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/EaselPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/EaselPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -636,7 +571,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/EaselPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/EaselPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/EasePack.min-min.js" : {
@@ -644,8 +579,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/EasePack.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/EasePack.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -656,7 +591,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/EasePack.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/EasePack.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -666,7 +601,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/EasePack.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/EasePack.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/Flip.min-min.js" : {
@@ -674,8 +609,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Flip.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/Flip.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -686,7 +621,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Flip.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/Flip.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -696,7 +631,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Flip.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/Flip.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/gsap.min.js" : {
@@ -715,7 +650,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/gsap.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/gsap.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/GSDevTools.min-min.js" : {
@@ -723,8 +658,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/GSDevTools.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/GSDevTools.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -735,7 +670,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/GSDevTools.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/GSDevTools.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -745,7 +680,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/GSDevTools.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/GSDevTools.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/InertiaPlugin.min-min.js" : {
@@ -753,8 +688,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/InertiaPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/InertiaPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -765,7 +700,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/InertiaPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/InertiaPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -775,7 +710,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/InertiaPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/InertiaPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/MorphSVGPlugin.min-min.js" : {
@@ -783,8 +718,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MorphSVGPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/MorphSVGPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -795,7 +730,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MorphSVGPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/MorphSVGPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -805,7 +740,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MorphSVGPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/MorphSVGPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/MotionPathHelper.min-min.js" : {
@@ -813,8 +748,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MotionPathHelper.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/MotionPathHelper.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -825,7 +760,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MotionPathHelper.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/MotionPathHelper.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -835,7 +770,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MotionPathHelper.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/MotionPathHelper.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/MotionPathPlugin.min-min.js" : {
@@ -843,8 +778,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MotionPathPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/MotionPathPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -855,7 +790,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MotionPathPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/MotionPathPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -865,7 +800,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/MotionPathPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/MotionPathPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/Observer.min-min.js" : {
@@ -873,8 +808,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Observer.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/Observer.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -885,7 +820,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Observer.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/Observer.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -895,7 +830,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Observer.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/Observer.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/Physics2DPlugin.min-min.js" : {
@@ -903,8 +838,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Physics2DPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/Physics2DPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -915,7 +850,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Physics2DPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/Physics2DPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -925,7 +860,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/Physics2DPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/Physics2DPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/PhysicsPropsPlugin.min-min.js" : {
@@ -933,8 +868,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/PhysicsPropsPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/PhysicsPropsPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -945,7 +880,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/PhysicsPropsPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/PhysicsPropsPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -955,7 +890,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/PhysicsPropsPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/PhysicsPropsPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/PixiPlugin.min-min.js" : {
@@ -963,8 +898,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/PixiPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/PixiPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -975,7 +910,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/PixiPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/PixiPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -985,7 +920,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/PixiPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/PixiPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/ScrambleTextPlugin.min-min.js" : {
@@ -993,8 +928,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/ScrambleTextPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/ScrambleTextPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1005,7 +940,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/ScrambleTextPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/ScrambleTextPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1015,7 +950,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/ScrambleTextPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/ScrambleTextPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/ScrollSmoother.min.js" : {
@@ -1034,7 +969,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/ScrollSmoother.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/ScrollSmoother.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/ScrollToPlugin.min.js" : {
@@ -1053,7 +988,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/ScrollToPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/ScrollToPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/ScrollTrigger.min.js" : {
@@ -1072,7 +1007,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/ScrollTrigger.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/ScrollTrigger.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/SplitText.min-min.js" : {
@@ -1080,8 +1015,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/SplitText.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/SplitText.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1092,7 +1027,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/SplitText.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/SplitText.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1102,7 +1037,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/SplitText.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/SplitText.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/gsap\/TextPlugin.min-min.js" : {
@@ -1110,8 +1045,8 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/TextPlugin.min-min-min.js",
+      "oA" : 1,
+      "oAP" : "\/assets\/js\/gsap\/TextPlugin.min-min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1122,7 +1057,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/TextPlugin.min-min.js",
+      "oAP" : "\/assets\/js\/gsap\/TextPlugin.min-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1132,7 +1067,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/source\/js\/gsap\/TextPlugin.min.js.map",
+      "oAP" : "\/assets\/js\/gsap\/TextPlugin.min.js.map",
       "oF" : 0
     },
     "\/source\/js\/main.js" : {
@@ -1152,7 +1087,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/source\/js\/toggleDark-min.js",
+      "oAP" : "\/assets\/js\/toggleDark-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 0
@@ -1175,7 +1110,7 @@
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/tailwind.config-min.js",
+      "oAP" : "\/assets\/tailwind.config-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -1185,7 +1120,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-about.php",
+      "oAP" : "\/assets\/template-parts\/content-about.php",
       "oF" : 0
     },
     "\/template-parts\/content-circleplus.php" : {
@@ -1193,7 +1128,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-circleplus.php",
+      "oAP" : "\/assets\/template-parts\/content-circleplus.php",
       "oF" : 0
     },
     "\/template-parts\/content-closesvg.php" : {
@@ -1201,7 +1136,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-closesvg.php",
+      "oAP" : "\/assets\/template-parts\/content-closesvg.php",
       "oF" : 0
     },
     "\/template-parts\/content-featured.php" : {
@@ -1209,7 +1144,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-featured.php",
+      "oAP" : "\/assets\/template-parts\/content-featured.php",
       "oF" : 0
     },
     "\/template-parts\/content-gigs-UMG.php" : {
@@ -1217,7 +1152,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-gigs-UMG.php",
+      "oAP" : "\/assets\/template-parts\/content-gigs-UMG.php",
       "oF" : 0
     },
     "\/template-parts\/content-gigs.php" : {
@@ -1225,7 +1160,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-gigs.php",
+      "oAP" : "\/assets\/template-parts\/content-gigs.php",
       "oF" : 0
     },
     "\/template-parts\/content-home.php" : {
@@ -1233,7 +1168,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-home.php",
+      "oAP" : "\/assets\/template-parts\/content-home.php",
       "oF" : 0
     },
     "\/template-parts\/content-labels.php" : {
@@ -1241,7 +1176,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-labels.php",
+      "oAP" : "\/assets\/template-parts\/content-labels.php",
       "oF" : 0
     },
     "\/template-parts\/content-legal.php" : {
@@ -1249,7 +1184,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-legal.php",
+      "oAP" : "\/assets\/template-parts\/content-legal.php",
       "oF" : 0
     },
     "\/template-parts\/content-logo.php" : {
@@ -1257,7 +1192,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-logo.php",
+      "oAP" : "\/assets\/template-parts\/content-logo.php",
       "oF" : 0
     },
     "\/template-parts\/content-newsletter.php" : {
@@ -1265,7 +1200,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-newsletter.php",
+      "oAP" : "\/assets\/template-parts\/content-newsletter.php",
       "oF" : 0
     },
     "\/template-parts\/content-none.php" : {
@@ -1273,7 +1208,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-none.php",
+      "oAP" : "\/assets\/template-parts\/content-none.php",
       "oF" : 0
     },
     "\/template-parts\/content-page.php" : {
@@ -1281,7 +1216,15 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-page.php",
+      "oAP" : "\/assets\/template-parts\/content-page.php",
+      "oF" : 0
+    },
+    "\/template-parts\/content-pause.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/template-parts\/content-pause.php",
       "oF" : 0
     },
     "\/template-parts\/content-release.php" : {
@@ -1289,7 +1232,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-release.php",
+      "oAP" : "\/assets\/template-parts\/content-release.php",
       "oF" : 0
     },
     "\/template-parts\/content-search.php" : {
@@ -1297,7 +1240,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-search.php",
+      "oAP" : "\/assets\/template-parts\/content-search.php",
       "oF" : 0
     },
     "\/template-parts\/content-social.php" : {
@@ -1305,7 +1248,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-social.php",
+      "oAP" : "\/assets\/template-parts\/content-social.php",
       "oF" : 0
     },
     "\/template-parts\/content-socialtext.php" : {
@@ -1313,7 +1256,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-socialtext.php",
+      "oAP" : "\/assets\/template-parts\/content-socialtext.php",
       "oF" : 0
     },
     "\/template-parts\/content-storecarousel.php" : {
@@ -1321,7 +1264,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-storecarousel.php",
+      "oAP" : "\/assets\/template-parts\/content-storecarousel.php",
       "oF" : 0
     },
     "\/template-parts\/content-streams.php" : {
@@ -1329,7 +1272,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-streams.php",
+      "oAP" : "\/assets\/template-parts\/content-streams.php",
       "oF" : 0
     },
     "\/template-parts\/content-ticker.php" : {
@@ -1337,7 +1280,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-ticker.php",
+      "oAP" : "\/assets\/template-parts\/content-ticker.php",
       "oF" : 0
     },
     "\/template-parts\/content-toggle.php" : {
@@ -1345,7 +1288,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-toggle.php",
+      "oAP" : "\/assets\/template-parts\/content-toggle.php",
       "oF" : 0
     },
     "\/template-parts\/content-twocol.php" : {
@@ -1353,7 +1296,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-twocol.php",
+      "oAP" : "\/assets\/template-parts\/content-twocol.php",
       "oF" : 0
     },
     "\/template-parts\/content-videogrid.php" : {
@@ -1361,7 +1304,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content-videogrid.php",
+      "oAP" : "\/assets\/template-parts\/content-videogrid.php",
       "oF" : 0
     },
     "\/template-parts\/content.php" : {
@@ -1369,7 +1312,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/template-parts\/content.php",
+      "oAP" : "\/assets\/template-parts\/content.php",
       "oF" : 0
     },
     "\/templates\/page-home.php" : {
@@ -1377,15 +1320,15 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/page-home.php",
+      "oAP" : "\/assets\/templates\/page-home.php",
       "oF" : 0
     },
-    "\/templates\/page-map.php" : {
+    "\/templates\/page-pause.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/page-map.php",
+      "oAP" : "\/assets\/templates\/page-pause.php",
       "oF" : 0
     },
     "\/templates\/page-releases.php" : {
@@ -1393,7 +1336,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/page-releases.php",
+      "oAP" : "\/assets\/templates\/page-releases.php",
       "oF" : 0
     },
     "\/templates\/page-store.php" : {
@@ -1401,7 +1344,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/page-store.php",
+      "oAP" : "\/assets\/templates\/page-store.php",
       "oF" : 0
     },
     "\/templates\/page-videos.php" : {
@@ -1409,7 +1352,7 @@
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/templates\/page-videos.php",
+      "oAP" : "\/assets\/templates\/page-videos.php",
       "oF" : 0
     }
   },
@@ -1425,7 +1368,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-payne",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 747138163.343961
+    "lastBuiltDate" : 766611494.415797
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -1720,7 +1663,7 @@
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
     "buildEnvironment" : 1,
-    "buildFolderActive" : 0,
+    "buildFolderActive" : 1,
     "buildFolderName" : "assets",
     "cleanBuild" : 0,
     "cssoForceMediaMerge" : 0,
@@ -3318,7 +3261,7 @@
     "webpPresets" : {
 
     },
-    "websiteRelativeRoot" : ""
+    "websiteRelativeRoot" : "assets"
   },
   "settingsFileVersion" : "3"
 }

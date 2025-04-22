@@ -90,7 +90,7 @@ $popup_display = $video_popup['popup_display'] ?? false;
 
   <?php if ($countdown_date): ?>
     <?php
-    $site_timezone = wp_timezone(); // Gets timezone set in Settings > General
+    $site_timezone = new DateTimeZone('Europe/London');
     $countdown_datetime = DateTime::createFromFormat('d/m/Y g:i a', $countdown_date, $site_timezone);
     $countdown_iso = $countdown_datetime ? $countdown_datetime->format('c') : '';
     ?>
@@ -294,7 +294,7 @@ $gallery_items = get_field('gallery_items');
 <?php endforeach; ?>
       </div>
     <?php endif; ?>
-    <div class="mb-24 flex justify-center"">
+    <div class="mb-24 flex justify-center">
     <?php
           echo do_shortcode( '
           [ae-custom-form id=1 no_profile_link=true no_salutation=true]

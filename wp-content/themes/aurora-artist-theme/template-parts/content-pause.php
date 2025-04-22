@@ -95,52 +95,52 @@ $popup_display = $video_popup['popup_display'] ?? false;
     $countdown_iso = $countdown_datetime ? $countdown_datetime->format('c') : '';
     ?>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const countdownDate = new Date("<?php echo esc_js($countdown_iso); ?>").getTime();
-        const countdownEl = document.getElementById("countdown");
+  document.addEventListener("DOMContentLoaded", function () {
+    const countdownDate = new Date("<?php echo esc_js($countdown_iso); ?>").getTime();
+    const countdownEl = document.getElementById("countdown");
 
-        function updateCountdown() {
-          const now = new Date().getTime();
-          const distance = countdownDate - now;
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
 
-          if (distance < 0) {
-            countdownEl.innerHTML = `<div class="text-xl font-semibold"></div>`;
-            return;
-          }
+      if (distance < 0) {
+        countdownEl.innerHTML = `<div class="text-xl font-semibold">Event started!</div>`;
+        return;
+      }
 
-          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-          const timeParts = [
-            { label: 'Days', value: days },
-            { label: 'Hours', value: hours },
-            { label: 'Minutes', value: minutes },
-            { label: 'Seconds', value: seconds },
-          ];
+      const timeParts = [
+        { label: 'Days', value: days },
+        { label: 'Hours', value: hours },
+        { label: 'Minutes', value: minutes },
+        { label: 'Seconds', value: seconds },
+      ];
 
-          countdownEl.innerHTML = timeParts.map(part => {
-            const digits = String(part.value).padStart(2, '0').split('');
-            return `
-              <div class="flex flex-col items-center">
+      countdownEl.innerHTML = timeParts.map(part => {
+        const digits = String(part.value).padStart(2, '0').split('');
+        return `
+          <div class="flex flex-col items-center">
                 <div class="flex gap-1 mb-1">
                   ${digits.map(d => `
-                    <div class="bg-black text-white text-2xl md:text-3xl font-bold w-8 h-8 md:w-12 md:h-12 flex items-center justify-center rounded-md shadow-inner ibm-plex">
-                     ${d}
+                    <div class="bg-black text-white text-3xl font-bold w-9 h-9 md:w-12 md:h-12 flex items-center justify-center rounded-md shadow-inner ibm-plex">
+                      ${d}
                     </div>
                   `).join('')}
                 </div>
-                <div class="text-[10px] md:text-xs uppercase tracking-widest">${part.label}</div>
+                <div class="text-[8px] md:text-xs uppercase tracking-widest">${part.label}</div>
               </div>
-            `;
-          }).join('');
-        }
+        `;
+      }).join('');
+    }
 
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-      });
-    </script>
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  });
+</script>
   <?php endif; ?>
 <?php endif; ?>
 
@@ -156,7 +156,7 @@ $hero_2_overlay = get_field('hero_2_overlay_color') ?: '#405191';
   <section class="relative px-4 md:px-7 mt-4 md:mt-8">
     <div class="w-full rounded-xl aspect-square md:aspect-[16/9] lg:rounded-3xl overflow-hidden relative">
       <div>
-        <div class="absolute inset-0 opacity-10 pointer-events-none z-10" style="background-color: <?php echo esc_attr($hero_2_overlay); ?>;"></div>
+      
         <?php if ($hero_2_video): ?>
           <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop playsinline>
             <source src="<?php echo esc_url($hero_2_video); ?>" type="video/mp4">
@@ -208,9 +208,11 @@ $block_2_video_url = get_field('block_2_video_url');
       
       <!-- Block 1: Background Color + Content -->
       <div class="rounded-xl lg:rounded-3xl overflow-hidden p-6 md:p-10 text-black" style="background-color: <?php echo esc_attr($block_1_bg); ?>;">
-        <div class="flex flex-col justify-center h-full max-w-xl mx-auto aspect-square md:aspect-auto">
+        <div class="flex flex-col justify-center h-full max-w-xl mx-auto min-h-[100vw] md:min-h-0">
+  
+          <div>
           <?php if ($block_1_heading): ?>
-            <h2 class="text-2xl md:text-4xl font-bold aurora-font mb-3"><?php echo esc_html($block_1_heading); ?></h2>
+            <h2 class="text-2xl md:text-4xl font-bold aurora-font mb-4"><?php echo esc_html($block_1_heading); ?></h2>
           <?php endif; ?>
 
           <?php if ($block_1_sub): ?>
@@ -218,16 +220,17 @@ $block_2_video_url = get_field('block_2_video_url');
           <?php endif; ?>
 
           <?php if ($block_1_content): ?>
-            <div class="prose max-w-none mb-6">
+            <div class="prose max-w-none">
               <?php echo wp_kses_post($block_1_content); ?>
             </div>
           <?php endif; ?>
+     
           <div class="flex justify-center">
           <?php
         echo do_shortcode( '
         [ae-custom-form id=1 no_profile_link=true no_salutation=true]
     <div class="flex justify-center w-full">
-   <button type="submit" class="button text-black py-4 uppercase text-xs my-4 md:w-auto md:text-xl inline-block">
+   <button type="submit" class="button text-black py-4 uppercase text-xs mb-4 md:w-auto md:text-xl inline-block">
    REGISTER YOUR INTEREST
   </button>
 </div>
@@ -240,6 +243,8 @@ $block_2_video_url = get_field('block_2_video_url');
             </a>
           <?php endif; ?>
           </div>
+          </div>
+      
         </div>
       </div>
 
@@ -282,7 +287,7 @@ $gallery_items = get_field('gallery_items');
     $colSpan = ($index === 2) ? 'md:col-span-2' : '';
   ?>
   <div class="<?php echo esc_attr($colSpan); ?>">
-    <div class="rounded-xl lg:rounded-3xl overflow-hidden mb-2">
+    <div class="rounded-xl lg:rounded-3xl overflow-hidden mb-4">
       <?php if ($img): ?>
         <img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>" class="w-full h-full object-cover" />
       <?php endif; ?>

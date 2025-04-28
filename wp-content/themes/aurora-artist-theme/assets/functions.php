@@ -252,3 +252,29 @@ function aurora_force_dark_mode_on_pause( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'aurora_force_dark_mode_on_pause' );
+
+// Add ICS download handler
+add_action('wp_ajax_download_ics', 'handle_ics_download');
+add_action('wp_ajax_nopriv_download_ics', 'handle_ics_download');
+
+function handle_ics_download() {
+    if (isset($_GET['event']) && isset($_GET['filename'])) {
+        $ics_content = base64_decode($_GET['event']);
+        $filename = sanitize_file_name($_GET['filename']);
+        
+        // Clear any previous output
+        if (ob_get_level()) ob_end_clean();
+        
+        // Set headers
+        header('Content-Type: text/calendar; charset=utf-8');
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
+        header('Content-Length: ' . strlen($ics_content));
+        header('Cache-Control: no-cache, must-revalidate');
+        header('Pragma: no-cache');
+        header('Expires: 0');
+        
+        // Output the file
+        echo $ics_content;
+        exit;
+    }
+}

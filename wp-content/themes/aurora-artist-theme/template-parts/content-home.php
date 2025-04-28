@@ -152,33 +152,198 @@ $countdown_iso = $countdown_datetime ? $countdown_datetime->format('c') : '';
   <?php endif; ?>
 <?php endif; ?>
 
-<!--
-<?php if ($popup_display && $video_oEmbed): ?>
-    <div id="videoPopup" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center py-20 px-12">
-    <button id="closePopup" class="absolute top-0 right-0 m-4 bg-black text-white p-4 rounded-full z-50"><?php get_template_part('template-parts/content', 'closesvg'); ?></button>
-          
-        <div class="relative h-full w-full max-w-4xl bg-black rounded-lg sm:h-auto">
-            
-         
-                <?php echo $video_oEmbed; ?>
-       
+<?php
+// Debug current template and ACF
+
+// Try getting the field with post ID
+$post_id = get_the_ID();
+
+$event_popup_display = get_field('event_popup_display') ?? true;
+$event_image_mobile = get_field('event_popup_image_mobile');
+$event_image_desktop = get_field('event_popup_image_desktop');
+$event_heading = get_field('event_popup_heading');
+$event_text = get_field('event_popup_text');
+$event_cta_1 = get_field('event_popup_cta_1');
+$event_cta_2 = get_field('event_popup_cta_2');
+$event_date = get_field('event_popup_date');
+$event_video = get_field('event_popup_video_oEmbed');
+
+?>
+
+<?php if ($event_popup_display): ?>
+    <div id="eventPopup" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center py-20 px-12">
+        <button id="closeEventPopup" class="absolute top-0 right-0 m-4 bg-black text-white p-4 rounded-full z-50"><?php get_template_part('template-parts/content', 'closesvg'); ?></button>
+        
+        <div class="relative h-full w-full max-w-4xl bg-white rounded-lg sm:h-auto p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="relative">
+                    <?php if ($event_video): ?>
+                        <!-- Video Content -->
+                        <div class="w-full aspect-video">
+                            <?php echo $event_video; ?>
+                        </div>
+                    <?php else: ?>
+                        <!-- Image Content -->
+                        <?php if ($event_image_mobile): ?>
+                            <!-- Mobile Image (Portrait) -->
+                            <img src="<?php echo esc_url($event_image_mobile['url']); ?>" 
+                                 alt="<?php echo esc_attr($event_image_mobile['alt']); ?>" 
+                                 class="w-full h-full object-cover rounded-lg md:hidden">
+                        <?php endif; ?>
+                        
+                        <?php if ($event_image_desktop): ?>
+                            <!-- Desktop Image (Landscape) -->
+                            <img src="<?php echo esc_url($event_image_desktop['url']); ?>" 
+                                 alt="<?php echo esc_attr($event_image_desktop['alt']); ?>" 
+                                 class="w-full h-full object-cover rounded-lg hidden md:block">
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <?php if ($event_heading): ?>
+                        <h2 class="text-3xl font-bold mb-4"><?php echo esc_html($event_heading); ?></h2>
+                    <?php endif; ?>
+                    
+                    <?php if ($event_text): ?>
+                        <div class="prose mb-6"><?php echo wp_kses_post($event_text); ?></div>
+                    <?php endif; ?>
+                    
+                    <?php if ($event_date): ?>
+                        <div class="mb-6">
+                            <div class="text-sm font-semibold mb-2">Event Date</div>
+                            <div class="text-lg mb-2"><?php echo esc_html($event_date); ?></div>
+                            <?php
+                            // Try different date formats
+                            $formats = ['Y-m-d H:i:s', 'd/m/Y', 'Y-m-d', 'm/d/Y'];
+                            $calendar_date = false;
+                            
+                            foreach ($formats as $format) {
+                                $calendar_date = DateTime::createFromFormat($format, $event_date);
+                                if ($calendar_date) break;
+                            }
+                            
+                            if ($calendar_date) {
+                                $start_date = $calendar_date->format('Ymd\THis');
+                                $end_date = $calendar_date->modify('+2 hours')->format('Ymd\THis');
+                                
+                                // Format dates for different services
+                                $google_start = $calendar_date->format('Y-m-d\TH:i:s');
+                                $google_end = $calendar_date->modify('+2 hours')->format('Y-m-d\TH:i:s');
+                                
+                                // Create calendar links
+                                $google_calendar_url = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' . urlencode($event_heading) . 
+                                                      '&dates=' . $google_start . '/' . $google_end . 
+                                                      '&details=' . urlencode($event_text);
+                                
+                                $outlook_url = 'https://outlook.live.com/owa/?path=/calendar/action/compose&rru=addevent' .
+                                              '&subject=' . urlencode($event_heading) .
+                                              '&startdt=' . $google_start .
+                                              '&enddt=' . $google_end .
+                                              '&body=' . urlencode($event_text);
+                                
+                                // Create the ICS file data with Apple Calendar format
+                                $calendar_data = "BEGIN:VCALENDAR\r\n";
+                                $calendar_data .= "CALSCALE:GREGORIAN\r\n";
+                                $calendar_data .= "VERSION:2.0\r\n";
+                                $calendar_data .= "X-WR-CALNAME:" . str_replace(["\r", "\n"], '', $event_heading) . "\r\n";
+                                $calendar_data .= "METHOD:PUBLISH\r\n";
+                                $calendar_data .= "PRODID:-//Apple Inc.//macOS//EN\r\n";
+                                $calendar_data .= "BEGIN:VEVENT\r\n";
+                                $calendar_data .= "TRANSP:TRANSPARENT\r\n";
+                                $calendar_data .= "DTEND;VALUE=DATE:" . $calendar_date->modify('+2 hours')->format('Ymd') . "\r\n";
+                                $calendar_data .= "UID:" . uniqid() . "@" . $_SERVER['HTTP_HOST'] . "\r\n";
+                                $calendar_data .= "CLASS:PUBLIC\r\n";
+                                $calendar_data .= "DTSTART;VALUE=DATE:" . $calendar_date->format('Ymd') . "\r\n";
+                                $calendar_data .= "LAST-MODIFIED:" . date('Ymd\THis\Z') . "\r\n";
+                                $calendar_data .= "DTSTAMP:" . date('Ymd\THis\Z') . "\r\n";
+                                $calendar_data .= "CATEGORIES:Event\r\n";
+                                $calendar_data .= "SUMMARY:" . str_replace(["\r", "\n"], '', $event_heading) . "\r\n";
+                                $calendar_data .= "SEQUENCE:0\r\n";
+                                $calendar_data .= "END:VEVENT\r\n";
+                                $calendar_data .= "END:VCALENDAR";
+                                
+                                // Create a temporary file and get its URL
+                                $filename = sanitize_file_name($event_heading) . '.ics';
+                                $upload_dir = wp_upload_dir();
+                                $file_path = $upload_dir['path'] . '/' . $filename;
+                                file_put_contents($file_path, $calendar_data);
+                                $ics_url = $upload_dir['url'] . '/' . $filename;
+                            ?>
+                            <div class="relative inline-block">
+                                <button class="inline-flex items-center text-sm text-blue-600 hover:text-blue-800" id="calendarDropdownBtn">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    Add to Calendar
+                                </button>
+                                <div id="calendarDropdown" class="hidden absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                    <div class="py-1" role="menu" aria-orientation="vertical">
+                                        <a href="<?php echo esc_url($google_calendar_url); ?>" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                            Google Calendar
+                                        </a>
+                                        <a href="<?php echo esc_url($outlook_url); ?>" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                            Outlook
+                                        </a>
+                                        <a href="<?php echo esc_url($ics_url); ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                            Apple Calendar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                document.getElementById('calendarDropdownBtn').addEventListener('click', function() {
+                                    document.getElementById('calendarDropdown').classList.toggle('hidden');
+                                });
+                                
+                                // Close dropdown when clicking outside
+                                document.addEventListener('click', function(event) {
+                                    const dropdown = document.getElementById('calendarDropdown');
+                                    const button = document.getElementById('calendarDropdownBtn');
+                                    if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                                        dropdown.classList.add('hidden');
+                                    }
+                                });
+                            </script>
+                            <?php } ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <?php if ($event_cta_1): ?>
+                            <a href="<?php echo esc_url($event_cta_1['url']); ?>" 
+                               target="<?php echo esc_attr($event_cta_1['target'] ?: '_self'); ?>" 
+                               class="button text-black py-4 uppercase text-xs sm:text-base text-center">
+                                <?php echo esc_html($event_cta_1['title']); ?>
+                            </a>
+                        <?php endif; ?>
+
+                        <?php if ($event_cta_2): ?>
+                            <a href="<?php echo esc_url($event_cta_2['url']); ?>" 
+                               target="<?php echo esc_attr($event_cta_2['target'] ?: '_self'); ?>" 
+                               class="button text-black py-4 uppercase text-xs sm:text-base text-center">
+                                <?php echo esc_html($event_cta_2['title']); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
-     
-        document.getElementById('closePopup').addEventListener('click', function() {
-            var videoPopup = document.getElementById('videoPopup');
-            videoPopup.style.display = 'none';
-            var iframe = videoPopup.querySelector('iframe');
-            var videoSrc = iframe.src;
-            iframe.src = '';
-            iframe.src = videoSrc;
+        document.getElementById('closeEventPopup').addEventListener('click', function() {
+            var eventPopup = document.getElementById('eventPopup');
+            eventPopup.style.display = 'none';
+            <?php if ($event_video): ?>
+                var iframe = eventPopup.querySelector('iframe');
+                if (iframe) {
+                    var videoSrc = iframe.src;
+                    iframe.src = '';
+                    iframe.src = videoSrc;
+                }
+            <?php endif; ?>
         });
     </script>
-
-<?php endif; 
- ?> 
-
+<?php endif; ?>
 
   <div class="h-[80vh] xl:h-screen relative p-8 flex items-center justify-center">
 <model-viewer id="heartModelViewer" class="w-full h-full" src="https://cdn1.umg3.net/1412-cdn/glb/Aurora_heart_GLB.glb"  ios-src="https://cdn1.umg3.net/1412-cdn/glb/Aurora_usdzSingle.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom disable-pan tone-mapping="neutral"  shadow-intensity="0" exposure="1.25" environment-image="https://cdn1.umg3.net/1412-cdn/glb/HDR_Light.jpg" shadow-softness="0.53" autoplay>

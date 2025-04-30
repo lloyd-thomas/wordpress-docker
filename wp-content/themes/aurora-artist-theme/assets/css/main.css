@@ -1183,6 +1183,10 @@ video {
     height: 100vh;
 }
 
+.max-h-\[80vh\]{
+    max-height: 80vh;
+}
+
 .min-h-\[100vw\]{
     min-height: 100vw;
 }
@@ -1261,10 +1265,6 @@ video {
 
 .max-w-2xl{
     max-width: 42rem;
-}
-
-.max-w-4xl{
-    max-width: 56rem;
 }
 
 .max-w-5xl{
@@ -2454,6 +2454,11 @@ video {
     background-color: rgb(83 90 121 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#5d594d\]{
+    --tw-bg-opacity: 1;
+    background-color: rgb(93 89 77 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#E3DFDF\]{
     --tw-bg-opacity: 1;
     background-color: rgb(227 223 223 / var(--tw-bg-opacity));
@@ -2739,11 +2744,6 @@ video {
 .py-2\.5{
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
-}
-
-.py-20{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
 }
 
 .py-3{
@@ -4311,11 +4311,6 @@ model-viewer {
     color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
-.hover\:text-blue-800:hover{
-    --tw-text-opacity: 1;
-    color: rgb(30 64 175 / var(--tw-text-opacity));
-}
-
 .hover\:text-gray-600:hover{
     --tw-text-opacity: 1;
     color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -4569,10 +4564,6 @@ model-viewer {
         display: grid;
     }
 
-    .sm\:h-auto{
-        height: auto;
-    }
-
     .sm\:w-52{
         width: 13rem;
     }
@@ -4696,6 +4687,11 @@ model-viewer {
         margin-right: 1rem;
     }
 
+    .md\:my-0{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
     .md\:mb-4{
         margin-bottom: 1rem;
     }
@@ -4735,8 +4731,16 @@ model-viewer {
         aspect-ratio: 16/9;
     }
 
+    .md\:aspect-auto{
+        aspect-ratio: auto;
+    }
+
     .md\:h-12{
         height: 3rem;
+    }
+
+    .md\:max-h-\[90vh\]{
+        max-height: 90vh;
     }
 
     .md\:min-h-0{
@@ -4779,8 +4783,16 @@ model-viewer {
         overflow-x: hidden;
     }
 
+    .md\:overflow-y-hidden{
+        overflow-y: hidden;
+    }
+
     .md\:rounded-3xl{
         border-radius: 1.5rem;
+    }
+
+    .md\:rounded-lg{
+        border-radius: 0.5rem;
     }
 
     .md\:rounded-xl{
@@ -4814,6 +4826,10 @@ model-viewer {
 
     .md\:p-7{
         padding: 1.75rem;
+    }
+
+    .md\:p-8{
+        padding: 2rem;
     }
 
     .md\:px-4{

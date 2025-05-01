@@ -348,3 +348,7 @@ model-viewer {
 .page-template-page-pause #themeToggleWrapper{
     display:none;
 }
+
+.elementToProof div{
+    @apply mb-4;
+}

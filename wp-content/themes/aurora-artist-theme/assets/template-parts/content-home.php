@@ -173,9 +173,9 @@ $event_video = get_field('event_popup_video_oEmbed');
 <?php if ($event_popup_display): ?>
     <div id="eventPopup" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
         <button id="closeEventPopup" class="absolute top-0 right-0 m-4 bg-black text-white p-4 rounded-full z-50"><?php get_template_part('template-parts/content', 'closesvg'); ?></button>
-               <div class="relative w-full h-full md:max-h-[90vh] md:max-w-4xl bg-[#5d594d] text-white md:rounded-lg md:p-8 px-4 py-4 overflow-y-auto md:my-0 md:overflow-y-hidden">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="relative md:aspect-auto">
+               <div class="relative w-full h-full md:max-h-[90vh] md:max-w-5xl bg-[#5d594d] text-white md:rounded-lg md:p-8 px-4 py-4 overflow-y-auto md:my-0">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                    <div class="relative md:aspect-auto md:col-span-2">
                         <?php if ($event_video): ?>
                             <!-- Video Content -->
                             <div class="w-full aspect-video">
@@ -198,19 +198,31 @@ $event_video = get_field('event_popup_video_oEmbed');
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>
-                    <div class="flex flex-col justify-center">
+                    <div class="flex flex-col justify-center md:col-span-3">
                         <?php if ($event_heading): ?>
-                            <h2 class="text-3xl font-bold mb-4 text-left text-white"><?php echo esc_html($event_heading); ?></h2>
+                            <h2 class="text-2xl font-bold mb-4 text-left text-white"><?php echo esc_html($event_heading); ?></h2>
                         <?php endif; ?>
                         
                         <?php if ($event_text): ?>
-                            <div class="prose mb-6 text-left text-white"><?php echo wp_kses_post($event_text); ?></div>
+                            <div class="prose text-left text-white text-sm"><?php echo wp_kses_post($event_text); ?></div>
                         <?php endif; ?>
-                        
+                        <div class="mt-4">
+                                    <?php
+                                    echo do_shortcode( '
+                                    [ae-custom-form id=1 no_profile_link=true no_salutation=true]
+                                    <div id="newsletter" class="m-auto">
+                                        <button type="submit" class="button text-black pt-4 uppercase text-xs mt-4 md:w-auto md:text-base inline-block">
+                                            Join Mailing List
+                                        </button>
+                                    </div>
+                                    [/ae-custom-form]   
+                                    ' );
+                                    ?>
+                                </div>
                         <?php if ($event_date): ?>
                             <div class="mb-6 text-left text-white">
-                                <div class="text-sm font-semibold mb-2">Event Date</div>
-                                <div class="text-lg mb-2"><?php echo esc_html($event_date); ?></div>
+                               <!-- <div class="text-sm font-semibold mb-2">Event Date</div>
+                                <div class="text-lg mb-2"><?php echo esc_html($event_date); ?></div>-->
                                 <?php
                                 // Try different date formats
                                 $formats = ['Y-m-d H:i:s', 'd/m/Y', 'Y-m-d', 'm/d/Y'];
@@ -261,47 +273,31 @@ $event_video = get_field('event_popup_video_oEmbed');
                                     $calendar_data .= "END:VEVENT\r\n";
                                     $calendar_data .= "END:VCALENDAR";
                                     
-                                    // Create a temporary file and get its URL
-                                    $filename = sanitize_file_name($event_heading) . '.ics';
-                                    $upload_dir = wp_upload_dir();
-                                    $file_path = $upload_dir['path'] . '/' . $filename;
-                                    file_put_contents($file_path, $calendar_data);
-                                    $ics_url = $upload_dir['url'] . '/' . $filename;
+                                    // Create a data URL for the ICS file
+                                    $ics_data_url = 'data:text/calendar;charset=utf-8,' . rawurlencode($calendar_data);
                                 ?>
-                                <div class="relative inline-block">
-                                    <button class="button text-black pt-4 uppercase text-xs my-4 md:w-auto md:text-lg inline-block" id="calendarDropdownBtn">
+                                <div class="relative inline-block mb-8">
+                                    <button class="button text-black pt-4 uppercase text-xs mt-4 md:w-auto md:text-base inline-block" id="calendarDropdownBtn">
                                       <div class="flex items-center"><svg class="w-4 h-4 mr-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                         </svg>
                                         <div>Add to Calendar</div></div>
                                     </button>
-                                    <div id="calendarDropdown" class="hidden absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                    <div id="calendarDropdown" class="hidden absolute z-10 left-full top-0 ml-2 w-48 rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5">
                                         <div class="py-1" role="menu" aria-orientation="vertical">
-                                            <a href="<?php echo esc_url($google_calendar_url); ?>" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                            <a href="<?php echo esc_url($google_calendar_url); ?>" target="_blank" class="block px-4 py-2 text-sm text-white hover:bg-gray-800" role="menuitem">
                                                 Google Calendar
                                             </a>
-                                            <a href="<?php echo esc_url($outlook_url); ?>" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                            <a href="<?php echo esc_url($outlook_url); ?>" target="_blank" class="block px-4 py-2 text-sm text-white hover:bg-gray-800" role="menuitem">
                                                 Outlook
                                             </a>
-                                            <a href="<?php echo esc_url($ics_url); ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                            <a href="<?php echo esc_attr($ics_data_url); ?>" download="<?php echo esc_attr(sanitize_file_name($event_heading) . '.ics'); ?>" class="block px-4 py-2 text-sm text-white hover:bg-gray-800" role="menuitem">
                                                 Apple Calendar
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mt-4">
-                                    <?php
-                                    echo do_shortcode( '
-                                    [ae-custom-form id=1 no_profile_link=true no_salutation=true]
-                                    <div id="newsletter" class="m-auto">
-                                        <button type="submit" class="button text-black pt-4 uppercase text-xs my-4 md:w-auto md:text-lg inline-block">
-                                            Join Mailing List
-                                        </button>
-                                    </div>
-                                    [/ae-custom-form]   
-                                    ' );
-                                    ?>
-                                </div>
+                              
                                 <script>
                                     document.getElementById('calendarDropdownBtn').addEventListener('click', function() {
                                         document.getElementById('calendarDropdown').classList.toggle('hidden');
@@ -367,7 +363,7 @@ $event_video = get_field('event_popup_video_oEmbed');
     </script>
 <?php endif; ?>
 
-  <div class="h-[80vh] xl:h-screen relative p-8 flex items-center justify-center">
+ <!-- <div class="h-[80vh] xl:h-screen relative p-8 flex items-center justify-center">
 <model-viewer id="heartModelViewer" class="w-full h-full" src="https://cdn1.umg3.net/1412-cdn/glb/Aurora_heart_GLB.glb"  ios-src="https://cdn1.umg3.net/1412-cdn/glb/Aurora_usdzSingle.usdz" ar ar-modes="webxr scene-viewer quick-look" camera-controls disable-zoom disable-pan tone-mapping="neutral"  shadow-intensity="0" exposure="1.25" environment-image="https://cdn1.umg3.net/1412-cdn/glb/HDR_Light.jpg" shadow-softness="0.53" autoplay>
 <div slot="ar-button" class="absolute bottom-0 w-full flex items-center justify-center dark:text-darktext">
   <div class="mr-3">See the heart in AR</div> 

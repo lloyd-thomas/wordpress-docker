@@ -38,7 +38,6 @@
                         'items_wrap' => '<ul id="%1$s" class="%2$s flex tracking-widest justify-center w-full flex-col uppercase text-white text-center">%3$s</ul>',
                     ));
                     ?>
-
                 </div>
             </nav>
 
@@ -72,3 +71,36 @@
            
         </header>
         <!-- #masthead -->
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('a[data-nav-type="spa"]');
+            const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.php';
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (isHomePage) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                            // Update URL without reloading
+                            history.pushState(null, '', '#' + targetId);
+                        }
+                    }
+                });
+            });
+
+            // Handle mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+        </script>
